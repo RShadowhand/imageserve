@@ -15,3 +15,7 @@ See instructions at [**/wiki/Setup**](https://github.com/aerouk/imageserve/wiki/
 
 ## Error Troubleshooting
 Covered [**in the wiki**](https://github.com/aerouk/imageserve/wiki/Error-Troubleshooting).
+
+## Credits
+- [aerouk](https://github.com/aerouk) (for the base work, thank you!)
+- [robflop](https://github.com/robflop) (for fixing unseen issues with .htaccess)
