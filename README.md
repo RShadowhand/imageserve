@@ -17,5 +17,6 @@ See instructions at [**/wiki/Setup**](https://github.com/aerouk/imageserve/wiki/
 Covered [**in the wiki**](https://github.com/aerouk/imageserve/wiki/Error-Troubleshooting).
 
 ## Credits
-- [aerouk](https://github.com/aerouk) (for the base work, thank you!)
-- [robflop](https://github.com/robflop) (for fixing unseen issues with .htaccess)
+- [aerouk](https://github.com/aerouk), for the base work.
+- [rShadowhand](https://github.com/rShadowhand), for updating imageserve with webm capabilities.
+- [robflop](https://github.com/robflop), for fixing unseen issues with .htaccess.
