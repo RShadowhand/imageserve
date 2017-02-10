@@ -14,13 +14,13 @@ RewriteRule  ^/?$                           viewer.php                      [L]
 
 RewriteRule  ^g/([^/\.]+)(.gif)?/?$         viewer.php?type=gif&file=$1     [L]
 RewriteRule  ^j/([^/\.]+)(.jpg|.jpeg)?/?$   viewer.php?type=jpeg&file=$1    [L]
+RewriteRule  ^p/([^/\.]+)(.png)?/?$           viewer.php?type=png&file=$1     [L]
 RewriteRule  ^w/([^/\.]+)(.webm)?/?$        viewer.php?type=webm&file=$1    [L]
 
-RewriteRule  ^([^/\.]+).gif/?$              viewer.php?type=gif&file=$1     [L]
-RewriteRule  ^([^/\.]+)(.jpg|.jpeg)/?$      viewer.php?type=jpeg&file=$1    [L]
-RewriteRule  ^([^/\.]+).webm/?$             viewer.php?type=webm&file=$1     [L]
-
+RewriteRule  ^([^/\.]+)(.gif)?/?$         viewer.php?type=gif&file=$1     [L]
+RewriteRule  ^([^/\.]+)(.jpg|.jpeg)?/?$   viewer.php?type=jpeg&file=$1    [L]
 RewriteRule  ^([^/\.]+)(.png)?/?$           viewer.php?type=png&file=$1     [L]
+RewriteRule  ^([^/\.]+)(.webm)?/?$        viewer.php?type=webm&file=$1    [L]
 
 # nginx equivalent of .htaccess, add to your config that handles imageserve
 # location / {
@@ -30,6 +30,9 @@ RewriteRule  ^([^/\.]+)(.png)?/?$           viewer.php?type=png&file=$1     [L]
 #     rewrite ^/([^/\.]+).gif/?$ /viewer.php?type=gif&file=$1 last;
 #     rewrite ^/([^/\.]+).webm/?$ /viewer.php?type=webm&file=$1 last;
 # }
+# location /p {
+#    rewrite ^/p/([^/\.]+)(.gif)?/?$ /viewer.php?type=gif&file=$1 last;
+#}
 # location /g {
 #     rewrite ^/g/([^/\.]+)(.gif)?/?$ /viewer.php?type=gif&file=$1 last;
 # }
