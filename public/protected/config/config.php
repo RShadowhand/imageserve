@@ -14,6 +14,7 @@
 
 define('RAW_IMAGE', false);
 define('RAW_IMAGE_LINK', false);
+define('NO_TYPE_DIR', false);
 define('IMAGE_EXTENSION', false);
 
 define('TWITTER_CARDS', true);
