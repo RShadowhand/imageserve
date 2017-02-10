@@ -6,7 +6,7 @@ if ( ! isset($_POST['password']) || $_POST['password'] !== PASSKEY) {
     die('error,e-401');
 }
 
-if ( ! ((getimagesize($_FILES['image']['tmp_name'])) && $_FILES['image']['type'] == 'image/png' || $_FILES['image']['type'] == 'image/jpeg' || $_FILES['image']['type'] == 'image/gif')) {
+if ( ! ($_FILES['image']['type'] == 'image/png' || $_FILES['image']['type'] == 'image/jpeg' || $_FILES['image']['type'] == 'image/gif' || $_FILES['image']['type'] == 'video/webm')) {
     die('error,e-415');
 }
 
@@ -42,8 +42,9 @@ function saveImage($mimeType, $tempName)
         case 'image/png':   $type = 'png'; break;
         case 'image/jpeg':  $type = 'jpeg'; break;
         case 'image/gif':   $type = 'gif'; break;
+        case 'video/webm':  $type = 'webm'; break;
 
-        default: die('error,e-415');
+        default: die('error,e-416');
     }
 
     $hash = generateNewHash($type);
