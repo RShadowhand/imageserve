@@ -25,7 +25,9 @@ $filesize = filesize($filelocation);
 if (RAW_IMAGE && strpos($_SERVER['HTTP_USER_AGENT'], 'Twitterbot') === false) {
     $filecontents = fopen($filelocation, 'rb');
 
-    header("Content-type: image/$type");
+    if($type == "webm") $content = 'video/webm';
+    else $content = 'image/'.$type;
+    header("Content-type: $content");
     header('Content-length: ' . $filesize);
 
     fpassthru($filecontents);
